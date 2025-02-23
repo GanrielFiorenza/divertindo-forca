@@ -38,7 +38,8 @@ const Index = () => {
 
   // Inicia o jogo quando o componente é montado
   useEffect(() => {
-    initializeGame();
+    // Removemos a inicialização automática para permitir a escolha da palavra
+    setWord('');
   }, []);
 
   // Verifica se o jogador ganhou
@@ -95,7 +96,7 @@ const Index = () => {
       <div className="game-container">
         <h1 className="text-3xl font-bold text-center mb-8">Jogo da Forca</h1>
         
-        {!gameOver && !word && (
+        {!word && (
           <div className="mb-8 space-y-4">
             <div className="flex justify-center gap-4">
               <button
