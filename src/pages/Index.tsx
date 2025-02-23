@@ -36,6 +36,17 @@ const Index = () => {
     setIsCustomWordMode(false);
   };
 
+  // Reseta o jogo para a tela inicial
+  const resetGame = () => {
+    setWord('');
+    setGuessedLetters(new Set());
+    setWrongGuesses(0);
+    setGameOver(false);
+    setWon(false);
+    setCustomWord('');
+    setIsCustomWordMode(false);
+  };
+
   // Inicia o jogo quando o componente é montado
   useEffect(() => {
     // Removemos a inicialização automática para permitir a escolha da palavra
@@ -156,7 +167,7 @@ const Index = () => {
         {gameOver && (
           <div className="mt-8 text-center">
             <button
-              onClick={() => initializeGame()}
+              onClick={resetGame}
               className="px-6 py-2 bg-primary text-primary-foreground rounded-lg
                        hover:bg-primary/90 transition-colors"
             >
