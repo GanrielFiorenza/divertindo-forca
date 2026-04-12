@@ -49,9 +49,21 @@ const Index = () => {
 
   // Inicia o jogo quando o componente é montado
   useEffect(() => {
-    // Removemos a inicialização automática para permitir a escolha da palavra
     setWord('');
   }, []);
+
+  // Captura teclas do teclado físico
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!word || gameOver) return;
+      const letter = e.key.toUpperCase();
+      if (/^[A-Z]$/.test(letter) && !guessedLetters.has(letter)) {
+        handleGuess(letter);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [word, gameOver, guessedLetters, wrongGuesses]);
 
   // Verifica se o jogador ganhou
   const checkWin = (currentGuessedLetters: Set<string>) => {
