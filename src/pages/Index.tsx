@@ -68,7 +68,7 @@ const Index = () => {
   // Verifica se o jogador ganhou
   const checkWin = (currentGuessedLetters: Set<string>) => {
     return word.split('').every(letter => 
-      currentGuessedLetters.has(letter.toUpperCase())
+      letter === '-' || currentGuessedLetters.has(letter.toUpperCase())
     );
   };
 
