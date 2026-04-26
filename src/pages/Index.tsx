@@ -66,10 +66,18 @@ const Index = () => {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [word, gameOver, guessedLetters, wrongGuesses]);
 
+  // Normaliza letra (remove acentos, transforma Ç em C)
+  const normalize = (letter: string) =>
+    letter
+      .toUpperCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/Ç/g, 'C');
+
   // Verifica se o jogador ganhou
   const checkWin = (currentGuessedLetters: Set<string>) => {
-    return word.split('').every(letter => 
-      letter === '-' || currentGuessedLetters.has(letter.toUpperCase())
+    return word.split('').every(letter =>
+      letter === '-' || letter === ' ' || currentGuessedLetters.has(normalize(letter))
     );
   };
 
@@ -77,13 +85,15 @@ const Index = () => {
   const handleGuess = (letter: string) => {
     if (gameOver) return;
 
-    const newGuessedLetters = new Set(guessedLetters).add(letter);
+    const normalizedLetter = normalize(letter);
+    const newGuessedLetters = new Set(guessedLetters).add(normalizedLetter);
     setGuessedLetters(newGuessedLetters);
 
-    if (!word.toUpperCase().includes(letter)) {
+    const wordLetters = word.split('').map(normalize);
+    if (!wordLetters.includes(normalizedLetter)) {
       const newWrongGuesses = wrongGuesses + 1;
       setWrongGuesses(newWrongGuesses);
-      
+
       if (newWrongGuesses >= 6) {
         setGameOver(true);
         toast({
