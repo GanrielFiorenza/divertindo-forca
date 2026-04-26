@@ -79,7 +79,7 @@
 
 .game-container {
   @apply max-w-2xl w-full space-y-8 p-8 
-         bg-[#B1FDEB] backdrop-blur-sm 
+         bg-[#5e78ff] backdrop-blur-sm 
          rounded-2xl shadow-lg 
          border border-border/50;
 }
