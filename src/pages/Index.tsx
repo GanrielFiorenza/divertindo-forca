@@ -5,6 +5,7 @@ import Keyboard from '@/components/Keyboard';
 import WordDisplay from '@/components/WordDisplay';
 import { useToast } from '@/hooks/use-toast';
 import { Input } from '@/components/ui/input';
+import backgroundImage from '@/assets/background.jpg';
 
 // Lista de palavras para o jogo
 const words = [
@@ -115,7 +116,15 @@ const Index = () => {
   };
 
   return (
-    <div className="hangman-container">
+    <div
+      className="hangman-container"
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
       <div className="game-container">
         <h1 className="text-3xl font-bold text-center mb-8">Jogo da Forca</h1>
         
