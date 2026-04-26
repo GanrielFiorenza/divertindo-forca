@@ -5,7 +5,7 @@
 
 @layer base {
   :root {
-    --background: 165 96% 84%;
+    --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
@@ -79,7 +79,7 @@
 
 .game-container {
   @apply max-w-2xl w-full space-y-8 p-8 
-         bg-white backdrop-blur-sm 
+         bg-[#B1FDEB] backdrop-blur-sm 
          rounded-2xl shadow-lg 
          border border-border/50;
 }
