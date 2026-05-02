@@ -1,5 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
 import HangmanDrawing from '@/components/HangmanDrawing';
 import Keyboard from '@/components/Keyboard';
 import WordDisplay from '@/components/WordDisplay';
@@ -136,6 +138,13 @@ const Index = () => {
       }}
     >
       <div className="game-container">
+        <Link
+          to="/"
+          className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline mb-4"
+        >
+          <ArrowLeft className="h-4 w-4" />
+          Voltar para a Home
+        </Link>
         <h1 className="text-3xl font-bold text-center mb-8">Jogo da Forca</h1>
         
         {!word && (
