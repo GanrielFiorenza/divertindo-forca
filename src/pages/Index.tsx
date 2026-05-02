@@ -1,5 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
 import HangmanDrawing from '@/components/HangmanDrawing';
 import Keyboard from '@/components/Keyboard';
 import WordDisplay from '@/components/WordDisplay';
