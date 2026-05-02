@@ -18,7 +18,7 @@ const GameCard: React.FC<GameCardProps> = ({ game }) => {
     >
       <div className="text-5xl mb-4">{game.emoji}</div>
       <h3 className="text-xl font-bold mb-2">{game.title}</h3>
-      <p className="text-sm text-muted-foreground mb-4">{game.description}</p>
+      <p className="text-sm text-white mb-4">{game.description}</p>
       {!game.available && (
         <span className="inline-block text-xs font-semibold px-2 py-1 rounded-full bg-secondary text-secondary-foreground">
           Em breve
