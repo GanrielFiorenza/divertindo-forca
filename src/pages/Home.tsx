@@ -24,7 +24,7 @@ const Home = () => {
           </p>
         </header>
 
-        <main className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in">
+        <main className="flex flex-wrap justify-center gap-6 animate-fade-in">
           {games.map((game) => (
             <GameCard key={game.id} game={game} />
           ))}
