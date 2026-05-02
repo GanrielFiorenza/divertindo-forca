@@ -9,7 +9,7 @@ interface GameCardProps {
 const GameCard: React.FC<GameCardProps> = ({ game }) => {
   const content = (
     <div
-      className={`group relative overflow-hidden rounded-2xl bg-white p-6 shadow-md border border-border/50
+      className={`group relative overflow-hidden rounded-2xl bg-[#5e78ff] p-6 shadow-md border border-border/50
                   transition-all duration-300 ${
                     game.available
                       ? 'hover:shadow-xl hover:-translate-y-1 cursor-pointer'
