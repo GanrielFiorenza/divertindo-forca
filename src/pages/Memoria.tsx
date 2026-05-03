@@ -137,6 +137,8 @@ const Memoria = () => {
                 {showFace ? (
                   card.emoji === NAPOLITANO ? (
                     <img src={napolitanoImg} alt="Napolitano" className="w-3/4 h-3/4 object-contain" />
+                  ) : card.emoji === MEXERICA ? (
+                    <img src={mexericaImg} alt="Mexerica" className="w-3/4 h-3/4 object-contain" />
                   ) : (
                     card.emoji
                   )
