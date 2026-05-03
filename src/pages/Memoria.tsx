@@ -6,11 +6,13 @@ import backgroundImage from '@/assets/background.jpg';
 import napolitanoImg from '@/assets/napolitano.png';
 import mexericaImg from '@/assets/mexerica.png';
 import pinguImg from '@/assets/pingu.png';
+import jesusImg from '@/assets/jesus.png';
 
 const NAPOLITANO = 'napolitano';
 const MEXERICA = 'mexerica';
 const PINGU = 'pingu';
-const EMOJIS = [NAPOLITANO, PINGU, '🦊', '🐻', MEXERICA, '🦁', '🐯', '🐸'];
+const JESUS = 'jesus';
+const EMOJIS = [NAPOLITANO, PINGU, JESUS, '🐻', MEXERICA, '🦁', '🐯', '🐸'];
 
 interface Card {
   id: number;
