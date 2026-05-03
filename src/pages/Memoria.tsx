@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import backgroundImage from '@/assets/background.jpg';
-import napolitanoImg from '@/assets/napolitano.png';
-import mexericaImg from '@/assets/mexerica.png';
-import pinguImg from '@/assets/pingu.png';
-import jesusImg from '@/assets/jesus.png';
-import nazarenoImg from '@/assets/nazareno.png';
-import tetelestaiImg from '@/assets/tetelestai.png';
-import ovelhaImg from '@/assets/ovelha.png';
-import jesusSkate from '@/assets/jesusSkate.png'
+import napolitanoImg from '@/assets/napolitano.webp';
+import mexericaImg from '@/assets/mexerica.webp';
+import pinguImg from '@/assets/pingu.webp';
+import jesusImg from '@/assets/jesus.webp';
+import nazarenoImg from '@/assets/nazareno.webp';
+import tetelestaiImg from '@/assets/tetelestai.webp';
+import ovelhaImg from '@/assets/ovelha.webp';
+import jesusSkate from '@/assets/jesusSkate.webp'
 
 const NAPOLITANO = 'napolitano';
 const MEXERICA = 'mexerica';
