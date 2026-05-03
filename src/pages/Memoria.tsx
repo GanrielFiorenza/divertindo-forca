@@ -4,9 +4,11 @@ import { ArrowLeft } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import backgroundImage from '@/assets/background.jpg';
 import napolitanoImg from '@/assets/napolitano.png';
+import mexericaImg from '@/assets/mexerica.png';
 
 const NAPOLITANO = 'napolitano';
-const EMOJIS = [NAPOLITANO, '🐱', '🦊', '🐻', '🐼', '🦁', '🐯', '🐸'];
+const MEXERICA = 'mexerica';
+const EMOJIS = [NAPOLITANO, '🐱', '🦊', '🐻', MEXERICA, '🦁', '🐯', '🐸'];
 
 interface Card {
   id: number;
