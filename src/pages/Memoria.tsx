@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import backgroundImage from '@/assets/background.jpg';
+import napolitanoImg from '@/assets/napolitano.png';
 
-const EMOJIS = ['🐶', '🐱', '🦊', '🐻', '🐼', '🦁', '🐯', '🐸'];
+const NAPOLITANO = 'napolitano';
+const EMOJIS = [NAPOLITANO, '🐱', '🦊', '🐻', '🐼', '🦁', '🐯', '🐸'];
 
 interface Card {
   id: number;
