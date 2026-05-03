@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import backgroundImage from '@/assets/background.jpg';
+import napolitanoImg from '@/assets/napolitano.png';
 
-const EMOJIS = ['🐶', '🐱', '🦊', '🐻', '🐼', '🦁', '🐯', '🐸'];
+const NAPOLITANO = 'napolitano';
+const EMOJIS = [NAPOLITANO, '🐱', '🦊', '🐻', '🐼', '🦁', '🐯', '🐸'];
 
 interface Card {
   id: number;
@@ -130,7 +132,15 @@ const Memoria = () => {
                             ${card.matched ? 'opacity-70' : ''}
                             shadow-md`}
               >
-                {showFace ? card.emoji : '?'}
+                {showFace ? (
+                  card.emoji === NAPOLITANO ? (
+                    <img src={napolitanoImg} alt="Napolitano" className="w-3/4 h-3/4 object-contain" />
+                  ) : (
+                    card.emoji
+                  )
+                ) : (
+                  '?'
+                )}
               </button>
             );
           })}
