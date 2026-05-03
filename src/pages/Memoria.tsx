@@ -8,13 +8,15 @@ import mexericaImg from '@/assets/mexerica.png';
 import pinguImg from '@/assets/pingu.png';
 import jesusImg from '@/assets/jesus.png';
 import nazarenoImg from '@/assets/nazareno.png';
+import tetelestaiImg from '@/assets/tetelestai.png';
 
 const NAPOLITANO = 'napolitano';
 const MEXERICA = 'mexerica';
 const PINGU = 'pingu';
 const JESUS = 'jesus';
 const NAZARENO = 'nazareno';
-const EMOJIS = [NAPOLITANO, PINGU, JESUS, '🐻', MEXERICA, '🦁', NAZARENO, '🐸'];
+const TETELESTAI = 'tetelestai';
+const EMOJIS = [NAPOLITANO, PINGU, JESUS, '🐻', MEXERICA, '🦁', NAZARENO, TETELESTAI];
 
 interface Card {
   id: number;
