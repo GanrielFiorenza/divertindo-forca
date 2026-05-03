@@ -16,11 +16,13 @@ const GameCard: React.FC<GameCardProps> = ({ game }) => {
                       : 'opacity-60 cursor-not-allowed'
                   }`}
     >
-      {game.icon ? (
-        <img src={game.icon} alt={game.title} className="h-20 w-20 object-contain mb-4" />
-      ) : (
-        <div className="text-5xl mb-4">{game.emoji}</div>
-      )}
+      <div className="h-20 w-20 flex items-center justify-center mb-4">
+        {game.icon ? (
+          <img src={game.icon} alt={game.title} className="h-20 w-20 object-contain" />
+        ) : (
+          <div className="text-6xl leading-none">{game.emoji}</div>
+        )}
+      </div>
       <h3 className="text-xl font-bold mb-2">{game.title}</h3>
       <p className="text-sm text-white mb-4">{game.description}</p>
       {!game.available && (
