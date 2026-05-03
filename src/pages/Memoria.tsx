@@ -7,12 +7,14 @@ import napolitanoImg from '@/assets/napolitano.png';
 import mexericaImg from '@/assets/mexerica.png';
 import pinguImg from '@/assets/pingu.png';
 import jesusImg from '@/assets/jesus.png';
+import nazarenoImg from '@/assets/nazareno.png';
 
 const NAPOLITANO = 'napolitano';
 const MEXERICA = 'mexerica';
 const PINGU = 'pingu';
 const JESUS = 'jesus';
-const EMOJIS = [NAPOLITANO, PINGU, JESUS, '🐻', MEXERICA, '🦁', '🐯', '🐸'];
+const NAZARENO = 'nazareno';
+const EMOJIS = [NAPOLITANO, PINGU, JESUS, '🐻', MEXERICA, '🦁', NAZARENO, '🐸'];
 
 interface Card {
   id: number;
@@ -147,6 +149,8 @@ const Memoria = () => {
                     <img src={pinguImg} alt="Pingu" className="w-3/4 h-3/4 object-contain" />
                   ) : card.emoji === JESUS ? (
                     <img src={jesusImg} alt="Jesus" className="w-3/4 h-3/4 object-contain" />
+                  ) : card.emoji === NAZARENO ? (
+                    <img src={nazarenoImg} alt="Nazareno" className="w-3/4 h-3/4 object-contain" />
                   ) : (
                     card.emoji
                   )
