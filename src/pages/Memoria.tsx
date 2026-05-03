@@ -132,7 +132,15 @@ const Memoria = () => {
                             ${card.matched ? 'opacity-70' : ''}
                             shadow-md`}
               >
-                {showFace ? card.emoji : '?'}
+                {showFace ? (
+                  card.emoji === NAPOLITANO ? (
+                    <img src={napolitanoImg} alt="Napolitano" className="w-3/4 h-3/4 object-contain" />
+                  ) : (
+                    card.emoji
+                  )
+                ) : (
+                  '?'
+                )}
               </button>
             );
           })}
