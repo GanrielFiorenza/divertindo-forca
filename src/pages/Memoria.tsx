@@ -5,10 +5,12 @@ import { useToast } from '@/hooks/use-toast';
 import backgroundImage from '@/assets/background.jpg';
 import napolitanoImg from '@/assets/napolitano.png';
 import mexericaImg from '@/assets/mexerica.png';
+import pinguImg from '@/assets/pingu.png';
 
 const NAPOLITANO = 'napolitano';
 const MEXERICA = 'mexerica';
-const EMOJIS = [NAPOLITANO, '🐱', '🦊', '🐻', MEXERICA, '🦁', '🐯', '🐸'];
+const PINGU = 'pingu';
+const EMOJIS = [NAPOLITANO, PINGU, '🦊', '🐻', MEXERICA, '🦁', '🐯', '🐸'];
 
 interface Card {
   id: number;
